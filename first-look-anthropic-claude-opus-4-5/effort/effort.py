@@ -11,7 +11,7 @@ response = client.beta.messages.create(
         "content": "Analyze the trade-offs between microservices and monolithic architectures"
     }],
     output_config={
-        "effort": "medium"
+        "effort": "low"
     }
 )
 
