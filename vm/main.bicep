@@ -127,7 +127,7 @@ resource DevVMCSE 'Microsoft.Compute/virtualMachines/extensions@2020-12-01' = {
     autoUpgradeMinorVersion: true
     protectedSettings: {
       fileUris: [
-        ''
+        'https://raw.githubusercontent.com/WayneHoggett-ACG/hyperdrive/refs/heads/main/vm/Set-VM.ps1'
       ]
       commandToExecute: 'powershell.exe -ExecutionPolicy Bypass -File Set-VM.ps1'
     }

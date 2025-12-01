@@ -76,4 +76,4 @@ choco install python -y --no-progress
 choco install typescript -y --no-progress
 
 # Install VSCode Extensions
-code --extensions-dir "%ProgramFiles%\Microsoft VS Code\resources\app\extensions" --install-extension ms-azuretools.vscode-containers
+code --extensions-dir "%ProgramFiles%\Microsoft VS Code\resources\app\extensions" --install-extension ms-python.python
