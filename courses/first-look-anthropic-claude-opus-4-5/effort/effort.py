@@ -16,3 +16,4 @@ response = client.beta.messages.create(
 )
 
 print(response.content[0].text)
+print(f"Output Token Usage: {response.usage.output_tokens}")
