@@ -75,5 +75,11 @@ choco install git -y --no-progress
 choco install python -y --no-progress
 choco install typescript -y --no-progress
 
+# Install Claude Code
+irm https://claude.ai/code/install.ps1 | iex
+
+# Install Gemini CLI
+irm https://gemini.com/cli/install.ps1 | iex
+
 # Install VSCode Extensions
 code --extensions-dir "%ProgramFiles%\Microsoft VS Code\resources\app\extensions" --install-extension ms-python.python
