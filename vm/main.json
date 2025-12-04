@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.39.26.7824",
-      "templateHash": "8224212816208082363"
+      "templateHash": "5102694493400014567"
     }
   },
   "variables": {
@@ -109,7 +109,7 @@
       "location": "[variables('location')]",
       "properties": {
         "hardwareProfile": {
-          "vmSize": "Standard_B2s"
+          "vmSize": "Standard_D2s_v3"
         },
         "osProfile": {
           "computerName": "DevVM"

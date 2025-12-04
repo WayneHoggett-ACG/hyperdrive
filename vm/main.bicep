@@ -83,7 +83,7 @@ resource DevVM 'Microsoft.Compute/virtualMachines@2020-12-01' = {
   location: location
   properties: {
     hardwareProfile: {
-      vmSize: 'Standard_B2s'
+      vmSize: 'Standard_D2s_v3'
     }
     osProfile: {
       computerName: 'DevVM'
