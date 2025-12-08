@@ -56,3 +56,20 @@ if (-not (Test-Path $DataCollectionPath)) {
 }
 New-ItemProperty -Path $DataCollectionPath -Name "AllowTelemetry" -Value 0 -PropertyType DWORD -Force
 New-ItemProperty -Path $DataCollectionPath -Name "DisableDiagnosticDataViewer" -Value 1 -PropertyType DWORD -Force
+
+# Install Chocolatey
+Set-ExecutionPolicy Bypass -Scope Process -Force
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+# Import Chocolately Profile
+$env:ChocolateyInstall = Convert-Path "$((Get-Command choco).Path)\..\.."   
+Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+
+# Update Environmental Variables
+Update-SessionEnvironment
+
+# Configure Software
+choco install git -y --no-progress
+choco install nodejs -y --no-progress
+choco install python -y --no-progress
